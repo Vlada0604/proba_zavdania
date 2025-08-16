@@ -1,0 +1,109 @@
+/* Загальні стилі */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  padding: 1rem;
+  color: #fff;
+}
+
+header h1 { margin: 0; }
+
+nav a {
+  margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a.active { font-weight: bold; }
+
+main {
+  padding: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #4facfe;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Модальне вікно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left:0;
+  top:0;
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background:#fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal .close {
+  position: absolute;
+  top:10px;
+  right:20px;
+  font-size: 1.5rem;
+  cursor:pointer;
+}
+
+/* Календар */
+.calendar-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+/* Список завдань */
+.tasks-list ul, .dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tasks-list li, .dashboard li {
+  background: #e0f7fa;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
