@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Головна</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>TaskFlow</h1>
+    <nav>
+      <a href="index.html" class="active">Головна</a>
+      <a href="tasks.html">Завдання</a>
+      <a href="calendar.html">Календар</a>
+      <a href="settings.html">Налаштування</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <div class="card">
+        <h2>Сьогоднішні завдання</h2>
+        <ul id="today-tasks"></ul>
+      </div>
+      <div class="card">
+        <h2>Нагадування</h2>
+        <ul id="reminders"></ul>
+      </div>
+    </section>
+
+    <button class="fab" id="add-task-btn">＋</button>
+  </main>
+
+  <!-- Діалог додавання завдання -->
+  <div id="task-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Нове завдання</h2>
+      <input type="text" id="task-title" placeholder="Назва завдання">
+      <textarea id="task-desc" placeholder="Опис завдання"></textarea>
+      <div class="datetime-picker">
+        <input type="datetime-local" id="task-datetime">
+      </div>
+      <select id="task-priority">
+        <option value="low">Низький</option>
+        <option value="medium">Середній</option>
+        <option value="high">Високий</option>
+      </select>
+      <button id="save-task">Зберегти</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
