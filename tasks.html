@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Завдання</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>TaskFlow</h1>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="tasks.html" class="active">Завдання</a>
+      <a href="calendar.html">Календар</a>
+      <a href="settings.html">Налаштування</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tasks-list">
+      <h2>Усі завдання</h2>
+      <ul id="task-list"></ul>
+    </section>
+
+    <button class="fab" id="add-task-btn-2">＋</button>
+  </main>
+
+  <!-- Діалог додавання завдання (такий же як на головній) -->
+  <div id="task-modal-2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Нове завдання</h2>
+      <input type="text" id="task-title-2" placeholder="Назва завдання">
+      <textarea id="task-desc-2" placeholder="Опис завдання"></textarea>
+      <div class="datetime-picker">
+        <input type="datetime-local" id="task-datetime-2">
+      </div>
+      <select id="task-priority-2">
+        <option value="low">Низький</option>
+        <option value="medium">Середній</option>
+        <option value="high">Високий</option>
+      </select>
+      <button id="save-task-2">Зберегти</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
